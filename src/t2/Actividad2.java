@@ -32,8 +32,7 @@ public class Actividad2 {
 
         int mitadSubarray = (inicioSubarray + finSubarray) / 2, menorPositivo = Integer.MAX_VALUE;
 
-        //Parte izquierda
-        if (vector[mitadSubarray] > 0) {
+        if (vector[mitadSubarray] > 0) { //Parte izquierda
             menorPositivo = Math.min(menorPositivo, positivoMenorRecursivo(vector, inicioSubarray, mitadSubarray));
         } else { //Parte derecha
             menorPositivo = Math.min(menorPositivo, positivoMenorRecursivo(vector, mitadSubarray + 1, finSubarray));
