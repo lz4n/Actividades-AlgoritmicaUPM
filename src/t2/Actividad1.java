@@ -25,8 +25,9 @@ public class Actividad1 {
             return v[inicioSubarray] % x == 0 ? 1 : 0;
         }
 
-        return numMultiplosRecursivo(v, x, inicioSubarray, (inicioSubarray + finSubarray) / 2) //Mitad izquierda
-                + numMultiplosRecursivo(v, x, (inicioSubarray + finSubarray) / 2 + 1, finSubarray); //Mitad derecha
+        int mitadSubarray = (inicioSubarray + finSubarray) / 2;
+        return numMultiplosRecursivo(v, x, inicioSubarray, mitadSubarray) //Mitad izquierda
+                + numMultiplosRecursivo(v, x, mitadSubarray + 1, finSubarray); //Mitad derecha
     }
 
 }
