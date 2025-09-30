@@ -20,22 +20,21 @@ public class Actividad2 {
             return -1;
         }
 
-        int menorPositivo = positivoMenorRecursivo(vector, 0, vector.length -1);
-        return menorPositivo == Integer.MAX_VALUE ? -1 : menorPositivo;
+        return positivoMenorRecursivo(vector, 0, vector.length -1);
     }
 
     private static int positivoMenorRecursivo(int[] vector, int inicioSubarray, int finSubarray) {
         if (inicioSubarray == finSubarray) {
             int valor = vector[inicioSubarray];
-            return valor > 0 ? valor : Integer.MAX_VALUE;
+            return valor > 0 ? valor : -1;
         }
 
-        int mitadSubarray = (inicioSubarray + finSubarray) / 2, menorPositivo = Integer.MAX_VALUE;
+        int mitadSubarray = (inicioSubarray + finSubarray) / 2, menorPositivo;
 
         if (vector[mitadSubarray] > 0) { //Parte izquierda
-            menorPositivo = Math.min(menorPositivo, positivoMenorRecursivo(vector, inicioSubarray, mitadSubarray));
+            menorPositivo = positivoMenorRecursivo(vector, inicioSubarray, mitadSubarray);
         } else { //Parte derecha
-            menorPositivo = Math.min(menorPositivo, positivoMenorRecursivo(vector, mitadSubarray + 1, finSubarray));
+            menorPositivo = positivoMenorRecursivo(vector, mitadSubarray + 1, finSubarray);
         }
 
         return menorPositivo;
