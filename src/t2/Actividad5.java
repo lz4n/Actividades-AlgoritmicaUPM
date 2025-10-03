@@ -18,10 +18,16 @@ public class Actividad5 {
     }
 
     private static int oneSubArrayRecursivo(int[] v, int i0, int iN) {
-        if (i0 == iN) return v[i0] == 1 ? 1 : 0;
+        if (i0 == iN) return v[i0];
 
         int pivote = (i0 + iN) / 2;
-        return Math.max(Math.max(oneSubArrayRecursivo(v, 0, pivote), oneSubArrayRecursivo(v, pivote + 1, iN)), oneSubArrayPivote(v, i0, iN, pivote));
+        return Math.max(
+                Math.max(
+                        oneSubArrayRecursivo(v, 0, pivote),
+                        oneSubArrayRecursivo(v, pivote + 1, iN)
+                ),
+                oneSubArrayPivote(v, i0, iN, pivote)
+        );
     }
 
     private static int oneSubArrayPivote(int[] v, int i0, int iN, int pivote) {
