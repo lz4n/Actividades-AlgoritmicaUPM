@@ -1,6 +1,6 @@
 package t2;
 
-public class Examen2018 {
+public class ExamenNoviembre2018 {
     public static void main(String[] args) {
         System.out.println(minArrayRotado(new int[]{10, 15, 32, 1, 2, 3 ,4 ,7}));
     }
