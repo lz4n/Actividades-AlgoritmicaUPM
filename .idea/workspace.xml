@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17c4e1c5-fccb-4fb0-b15a-4b27146c2582" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/t3/Enero2024.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/t3/Junio2018.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/t3/Noviembre2021.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/t3/Noviembre2023.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/t3/ExtraSeleccionOptima.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/t3/Octubre2025.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/t3/Enero2024.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/t3/Enero2024.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/t3/Noviembre2023.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/t3/Noviembre2023.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +38,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.A.executor": "Run",
     "Application.Actividad1.executor": "Run",
     "Application.Actividad2.executor": "Run",
     "Application.Actividad3.executor": "Run",
@@ -49,15 +50,19 @@
     "Application.ExamenJunio2025.executor": "Debug",
     "Application.ExamenNoviembre2022.executor": "Run",
     "Application.ExmenJunio2021.executor": "Run",
+    "Application.ExtraSeleccionOptima.executor": "Run",
     "Application.Junio2018.executor": "Run",
     "Application.Noviembre2021.executor": "Run",
     "Application.Noviembre2023.executor": "Run",
+    "Application.Octubre2025.executor": "Run",
     "Application.TEST.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/izanp/IdeaProjects/ActividadesAlgoritmica"
+    "last_opened_file_path": "C:/Users/izan/Documents/Proyectos/Actividades-AlgoritmicaUPM"
   }
 }]]></component>
   <component name="RecentsManager">

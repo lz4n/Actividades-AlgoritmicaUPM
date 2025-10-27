@@ -11,50 +11,55 @@ public class Enero2024 {
     private static int[] equipos(int[] habilidad, int k) {
         if (habilidad.length < k) return null;
 
-        int[] mejorSolucion = new int[habilidad.length];
-        equipos(habilidad, k, 0, new int[habilidad.length], new int[k], mejorSolucion, new AtomicInteger(Integer.MAX_VALUE));
-        return mejorSolucion;
+        int[] mejorEstado = new int[habilidad.length];
+        boolean encontrado = equiposRecursivo(habilidad, k, 0, new int[habilidad.length], new int[k], mejorEstado, new AtomicInteger(Integer.MAX_VALUE));
+
+        return encontrado ? mejorEstado : null;
     }
 
-    private static void equipos(int[] habilidad, int k, int nivel, int[] estadoActual, int[] habilidadEquipo, int[] mejorSolucion, AtomicInteger mejorBondad) {
+    private static boolean equiposRecursivo(int[] habilidad, int k, int nivel, int[] estadoAcutal, int[] equipos, int[] mejorEstado, AtomicInteger mejorBondad) {
         if (nivel == habilidad.length) {
-            int bondadSolucion = calcularBondadSolucion(habilidadEquipo);
-            if (bondadSolucion < mejorBondad.get()) {
-                mejorBondad.set(bondadSolucion);
-                for (int i = 0; i < estadoActual.length; i++) {
-                    mejorSolucion[i] = estadoActual[i];
+            int bondadActual = getBondadActual(equipos);
+            if (bondadActual < mejorBondad.get()) {
+                mejorBondad.set(bondadActual);
+
+                for (int i = 0; i < estadoAcutal.length; i++) {
+                    mejorEstado[i] = estadoAcutal[i];
                 }
+
+                return true;
             }
-            return;
+
+            return false;
         }
 
-        if (mejorBondad.get() == 0) return;
-
+        boolean encontrado = false;
         for (int c = 0; c < k; c++) {
-            estadoActual[nivel] = c;
-            habilidadEquipo[c] += habilidad[nivel];
 
-            equipos(habilidad, k, nivel + 1, estadoActual, habilidadEquipo, mejorSolucion, mejorBondad);
+            estadoAcutal[nivel] = c;
+            equipos[c] += habilidad[nivel];
 
-            estadoActual[nivel] = 0;
-            habilidadEquipo[c] -= habilidad[nivel];
+            encontrado = equiposRecursivo(habilidad, k, nivel + 1, estadoAcutal, equipos, mejorEstado, mejorBondad) || encontrado;
+
+            equipos[c] -= habilidad[nivel];
         }
+
+        return encontrado;
     }
 
-    private static int calcularBondadSolucion(int[] habilidadEquipo) {
-        int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
-        boolean hayEquipoSinHabilidad = false;
+    private static int getBondadActual(int[] equipos) {
+        boolean equipoVacio = false;
+        int i = 0, min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
 
-        int i = 0;
-        while (!hayEquipoSinHabilidad && i < habilidadEquipo.length) {
-            min = Math.min(min, habilidadEquipo[i]);
-            max = Math.max(max, habilidadEquipo[i]);
+        while (i < equipos.length && !equipoVacio) {
+            equipoVacio = equipos[i] == 0;
 
-            hayEquipoSinHabilidad = habilidadEquipo[i] == 0;
+            if (equipos[i] < min) min = equipos[i];
+            if (equipos[i] > max) max = equipos[i];
 
             i++;
         }
 
-        return hayEquipoSinHabilidad ? Integer.MAX_VALUE : max - min;
+        return equipoVacio ? Integer.MAX_VALUE : max - min;
     }
 }
