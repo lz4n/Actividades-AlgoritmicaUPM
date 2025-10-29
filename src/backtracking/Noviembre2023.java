@@ -7,36 +7,27 @@ public class Noviembre2023 {
         System.out.println(Arrays.toString(teleferico(new int[]{1, 2, 3, 1}, 2, 3)));
     }
 
-    private static boolean[] teleferico(int[] pesos, int numP, int pMax) {
+    public static boolean[] teleferico(int[] pesos, int numP, int pMax) {
+        if (pesos.length < numP) return null;
+
         boolean[] solucion = new boolean[pesos.length];
-        boolean haySolucion = telefericoRecursivo(pesos, 0, numP, pMax, solucion);
-        return haySolucion ? solucion : null;
+        boolean encontrado = telefericoRecursivo(pesos, 0, numP, pMax, solucion);
+
+        return encontrado ? solucion : null;
     }
 
-    private static boolean telefericoRecursivo(int[] pesos, int nivel, int faltaPersonas, int faltaPeso, boolean[] estado) {
+    private static boolean telefericoRecursivo(int[] pesos, int nivel, int faltaPersonas, int faltaPeso, boolean[] estadoActual) {
         if (faltaPersonas == 0 && faltaPeso == 0) return true;
+        if (faltaPeso < 0 || nivel == pesos.length) return false;
 
-        boolean solucion = false;
-        int c = 0;
-        while (c < 2 && !solucion) {//c=0 no selecciono, c=1 selecciono
-            if (c == 0 || (c == 1 && faltaPersonas >= 1 && faltaPeso >= pesos[nivel])) {
-                estado[nivel] = c == 1;
+        //Seleccionamos a la persona con peso = pesos[nivel]
+        estadoActual[nivel] = true;
+        boolean solucion = telefericoRecursivo(pesos, nivel + 1, faltaPersonas - 1, faltaPeso - pesos[nivel], estadoActual);
+        if (solucion) return true;
 
-                faltaPersonas -= c;
-                faltaPeso -= pesos[nivel] * c;
-
-                solucion = telefericoRecursivo(pesos, nivel + 1, faltaPersonas, faltaPeso, estado);
-
-                if (!solucion) {
-                    estado[nivel] = false;
-                    faltaPersonas += c;
-                    faltaPeso += pesos[nivel] * c;
-                }
-            }
-
-            c++;
-        }
-
+        //NO seleccionamos a la persona
+        estadoActual[nivel] = false;
+        solucion = telefericoRecursivo(pesos, nivel + 1, faltaPersonas, faltaPeso, estadoActual);
         return solucion;
     }
 }
