@@ -1,4 +1,4 @@
-package t2;
+package divideYVenceras;
 
 /**
  * Problema 1. Dado un array de números enteros ordenado, se desea obtener el

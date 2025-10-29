@@ -1,4 +1,4 @@
-package t2;
+package divideYVenceras;
 
 /**
  * Dado un vector de enteros ordenados mayores que cero, se quiere obtener

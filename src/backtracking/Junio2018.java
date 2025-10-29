@@ -1,6 +1,4 @@
-package t3;
-
-import java.util.Arrays;
+package backtracking;
 
 public class Junio2018 {
     public static void main(String[] args) {

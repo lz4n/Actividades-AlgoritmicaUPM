@@ -1,7 +1,6 @@
-package t3;
+package backtracking;
 
 import java.util.Arrays;
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Noviembre2021 {

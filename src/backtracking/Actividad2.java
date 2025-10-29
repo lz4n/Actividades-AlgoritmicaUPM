@@ -1,4 +1,4 @@
-package t3;
+package backtracking;
 
 /**
  * Problema. Dado un vector, v, que contiene los valores de un conjunto de elementos, se

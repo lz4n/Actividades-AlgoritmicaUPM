@@ -1,4 +1,4 @@
-package t3;
+package backtracking;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

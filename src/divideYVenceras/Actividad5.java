@@ -1,4 +1,4 @@
-package t2;
+package divideYVenceras;
 
 /**
  * Problema. Dada una cadena de ceros y unos, encontrar la secuencia más larga de unos

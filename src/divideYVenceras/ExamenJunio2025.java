@@ -1,4 +1,4 @@
-package t2;
+package divideYVenceras;
 
 import java.util.Arrays;
 

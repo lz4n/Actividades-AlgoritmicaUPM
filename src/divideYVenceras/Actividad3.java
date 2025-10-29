@@ -1,4 +1,4 @@
-package t2;
+package divideYVenceras;
 
 /**
  * Problema. Diseñar un algoritmo que, dado v un array de enteros ordenados, y

@@ -1,4 +1,4 @@
-package t2;
+package divideYVenceras;
 
 public class ExamenNoviembre2018 {
     public static void main(String[] args) {

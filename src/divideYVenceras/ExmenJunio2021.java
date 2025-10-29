@@ -1,4 +1,4 @@
-package t2;
+package divideYVenceras;
 
 /**
  * Sean A y B dos vectores de N elementos enteros, ordenados circularmente

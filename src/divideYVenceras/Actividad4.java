@@ -1,4 +1,4 @@
-package t2;
+package divideYVenceras;
 
 /**
  * Problema. Dado un array de números ordenados en los que todos ellos aparecen dos

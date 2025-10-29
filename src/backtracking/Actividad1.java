@@ -1,4 +1,4 @@
-package t3;
+package backtracking;
 
 /**
  * Problema (2.5 puntos). Disponemos de una cantidad concreta de varios tipos de
