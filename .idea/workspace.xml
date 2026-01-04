@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17c4e1c5-fccb-4fb0-b15a-4b27146c2582" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/voraces/Actividad1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/voraces/Actividad2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dinamica/Diciembre2016.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dinamica/Diciembre2023.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dinamica/Enero2022.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/stat.log" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stat.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -57,7 +58,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/izanp/IdeaProjects/ActividadesAlgoritmica",
+    "last_opened_file_path": "C:/Users/izan/Downloads/tp1",
     "settings.editor.selected.configurable": "editor.preferences.inline.completion"
   }
 }]]></component>
